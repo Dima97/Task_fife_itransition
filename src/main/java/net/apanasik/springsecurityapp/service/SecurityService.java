@@ -1,11 +1,6 @@
-package net.proselyte.springsecurityapp.service;
+package net.apanasik.springsecurityapp.service;
 
-/**
- * Service for Security.
- *
- * @author Eugene Suleimanov
- * @version 1.0
- */
+
 
 public interface SecurityService {
 

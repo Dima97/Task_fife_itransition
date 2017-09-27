@@ -1,14 +1,8 @@
-package net.proselyte.springsecurityapp.model;
+package net.apanasik.springsecurityapp.model;
 
 import javax.persistence.*;
 import java.util.Set;
 
-/**
- * Simple JavaBean domain object that represents a User.
- *
- * @author Eugene Suleimanov
- * @version 1.0
- */
 
 @Entity
 @Table(name = "users")
@@ -31,6 +25,21 @@ public class User {
     @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles;
+
+    @Column(name = "blocked")
+    private boolean blocked;
+
+    public User() {
+        blocked = false;
+    }
+
+    public boolean isBlocked() {
+        return blocked;
+    }
+
+    public void setBlocked(boolean blocked) {
+        this.blocked = blocked;
+    }
 
     public Long getId() {
         return id;

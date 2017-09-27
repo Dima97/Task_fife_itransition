@@ -9,23 +9,22 @@
 
     <http auto-config="true">
         <intercept-url pattern="/" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')"/>
-        <intercept-url pattern="/welcome" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')"/>
+        <!--<intercept-url pattern="/welcome" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')"/>-->
         <intercept-url pattern="/admin" access="hasRole('ROLE_ADMIN')"/>
 
-        <form-login login-page="/login" default-target-url="/welcome" authentication-failure-url="/login?error"
+        <form-login login-page="/login" default-target-url="/welcome*" authentication-failure-url="/login?error"
                     username-parameter="username" password-parameter="password"/>
-
         <logout logout-success-url="/login?logout"/>
     </http>
 
     <authentication-manager alias="authenticationManager">
         <authentication-provider user-service-ref="userDetailsServiceImpl">
-            <password-encoder ref="encoder"></password-encoder>
+            <password-encoder ref="encoder"/>
         </authentication-provider>
     </authentication-manager>
 
     <beans:bean id="userDetailsServiceImpl"
-                class="net.proselyte.springsecurityapp.service.UserDetailsServiceImpl"></beans:bean>
+                class="net.apanasik.springsecurityapp.service.UserDetailsServiceImpl"/>
 
     <beans:bean id="encoder"
                 class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">

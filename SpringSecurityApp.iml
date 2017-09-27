@@ -9,13 +9,13 @@
         <webroots>
           <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
         </webroots>
-        <sourceRoots>
-          <root url="file://$MODULE_DIR$/src/main/resources" />
-        </sourceRoots>
       </configuration>
     </facet>
+    <facet type="Spring" name="Spring">
+      <configuration />
+    </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="false">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -25,6 +25,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: ru.simplex_software:ulogin_spring_security:1.0.2-RELEASE" level="project" />
+    <orderEntry type="library" name="jsoup-1.10.3" level="project" />
+    <orderEntry type="library" name="com.google.code.gson:gson:2.8.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-web:4.2.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.2.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:4.2.0.RELEASE" level="project" />
@@ -67,5 +70,13 @@
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:3.8.1" level="project" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.1.3" level="project" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-core:1.1.3" level="project" />
+    <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.10.2" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.1" level="project" />
+    <orderEntry type="library" name="org.webjars.bower:jscroll:2.3.5" level="project" />
+    <orderEntry type="library" name="com.google.gwt.google-apis:gwt-ajaxloader:1.1.0" level="project" />
+    <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="respond" level="application" />
+    <orderEntry type="library" name="html5shiv" level="application" />
+    <orderEntry type="library" name="ru.primetalk:russian-lang_2.10:1.4.0" level="project" />
   </component>
 </module>

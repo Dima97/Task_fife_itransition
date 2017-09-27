@@ -2,7 +2,8 @@
 CREATE TABLE users (
   id       INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
   username VARCHAR(255) NOT NULL,
-  password VARCHAR(255) NOT NULL
+  password VARCHAR(255) NOT NULL,
+  blocked  BOOLEAN      NOT NULL
 )
   ENGINE = InnoDB;
 
@@ -25,9 +26,22 @@ CREATE TABLE user_roles (
 )
   ENGINE = InnoDB;
 
+-- Table: links
+CREATE TABLE links (
+  id   INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  link VARCHAR(255) NOT NULL,
+  image VARCHAR(100),
+  text VARCHAR(100)
+)DEFAULT CHARACTER SET utf8
+  ENGINE = InnoDB;
+
+
 -- Insert data
 
-INSERT INTO users VALUES (1, 'proselyte', '$2a$11$uSXS6rLJ91WjgOHhEGDx..VGs7MkKZV68Lv5r1uwFu7HgtRn3dcXG');
+INSERT INTO links VALUES (1,'http://belchip.by/product/?selected_product=14576',
+                          'http://belchip.by/sitepics/14877b.jpg','Субмодуль для Arduino 433MHz / при.');
+
+INSERT INTO users VALUES (1, 'apanasik', '$2a$11$uSXS6rLJ91WjgOHhEGDx..VGs7MkKZV68Lv5r1uwFu7HgtRn3dcXG', FALSE);
 
 INSERT INTO roles VALUES (1, 'ROLE_USER');
 INSERT INTO roles VALUES (2, 'ROLE_ADMIN');

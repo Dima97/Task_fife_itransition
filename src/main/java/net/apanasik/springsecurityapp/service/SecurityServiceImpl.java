@@ -1,4 +1,4 @@
-package net.proselyte.springsecurityapp.service;
+package net.apanasik.springsecurityapp.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,12 +10,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 
-/**
- * Implementation of {@link SecurityService} interface.
- *
- * @author Eugene Suleimanov
- * @version 1.0
- */
+
 
 @Service
 public class SecurityServiceImpl implements SecurityService {
@@ -43,12 +38,9 @@ public class SecurityServiceImpl implements SecurityService {
         UserDetails userDetails = userDetailsService.loadUserByUsername(username);
         UsernamePasswordAuthenticationToken authenticationToken =
                 new UsernamePasswordAuthenticationToken(userDetails, password, userDetails.getAuthorities());
-
         authenticationManager.authenticate(authenticationToken);
-
         if (authenticationToken.isAuthenticated()) {
             SecurityContextHolder.getContext().setAuthentication(authenticationToken);
-
             logger.debug(String.format("Successfully %s auto logged in", username));
         }
     }

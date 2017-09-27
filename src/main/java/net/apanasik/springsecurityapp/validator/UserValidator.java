@@ -1,20 +1,12 @@
-package net.proselyte.springsecurityapp.validator;
+package net.apanasik.springsecurityapp.validator;
 
-import net.proselyte.springsecurityapp.model.User;
-import net.proselyte.springsecurityapp.service.UserService;
+import net.apanasik.springsecurityapp.model.User;
+import net.apanasik.springsecurityapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
-
-/**
- * Validator for {@link net.proselyte.springsecurityapp.model.User} class,
- * implements {@link Validator} interface.
- *
- * @author Eugene Suleimanov
- * @version 1.0
- */
 
 @Component
 public class UserValidator implements Validator {
@@ -32,7 +24,7 @@ public class UserValidator implements Validator {
         User user = (User) o;
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "Required");
-        if (user.getUsername().length() < 8 || user.getUsername().length() > 32) {
+        if (user.getUsername().length() < 4 || user.getUsername().length() > 32) {
             errors.rejectValue("username", "Size.userForm.username");
         }
 

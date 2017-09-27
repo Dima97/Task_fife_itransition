@@ -1,8 +1,8 @@
-package net.proselyte.springsecurityapp.service;
+package net.apanasik.springsecurityapp.service;
 
-import net.proselyte.springsecurityapp.dao.UserDao;
-import net.proselyte.springsecurityapp.model.Role;
-import net.proselyte.springsecurityapp.model.User;
+import net.apanasik.springsecurityapp.dao.UserDao;
+import net.apanasik.springsecurityapp.model.Role;
+import net.apanasik.springsecurityapp.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -14,12 +14,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * Implementation of {@link org.springframework.security.core.userdetails.UserDetailsService} interface.
- *
- * @author Eugene Suleimanov
- * @version 1.0
- */
 
 
 public class UserDetailsServiceImpl implements UserDetailsService {

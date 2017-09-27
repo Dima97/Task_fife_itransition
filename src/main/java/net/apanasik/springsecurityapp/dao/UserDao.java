@@ -1,8 +1,9 @@
-package net.proselyte.springsecurityapp.dao;
+package net.apanasik.springsecurityapp.dao;
 
-import net.proselyte.springsecurityapp.model.User;
+import net.apanasik.springsecurityapp.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserDao extends JpaRepository<User, Long> {
     User findByUsername(String username);
+
 }
